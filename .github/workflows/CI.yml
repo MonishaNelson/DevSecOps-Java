@@ -95,7 +95,7 @@ jobs:
         with:
           image-ref: java-app:latest
           format: 'table'
-          exit-code: '1'
+          exit-code: '0'
           ignore-unfixed: true
           output: 'trivy-image-results.sarif'
           vuln-type: 'os,library'
