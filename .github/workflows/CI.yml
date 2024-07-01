@@ -218,10 +218,10 @@ jobs:
           CHART_VERSION=$(cat charts/Chart.yaml | grep '^version:' | awk '{print $2}')
           CHART_NAME=$(cat charts/Chart.yaml | grep '^name:' | awk '{print $2}')
           PACKAGE_NAME="${CHART_NAME}-${CHART_VERSION}.tgz"
-          cp /home/runner/work/Devsecops-Angular/Devsecops-Angular/packaged-charts/$PACKAGE_NAME .
-          git clone https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}.git --branch gh-pages --single-branch gh-pages
+          cp /home/runner/work/DevSecOps-Java/DevSecOps-Java/packaged-charts/$PACKAGE_NAME .
+          git clone https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/MonishaNelson/DevSecOps-Java.git --branch gh-pages --single-branch gh-pages
           cd gh-pages
-          cp /home/runner/work/Devsecops-Angular/Devsecops-Angular/packaged-charts/$PACKAGE_NAME .
+          cp /home/runner/work/DevSecOps-Java/DevSecOps-Java/packaged-charts/$PACKAGE_NAME .
           git add $PACKAGE_NAME
           git commit -m "Add $PACKAGE_NAME"
           git push origin gh-pages
