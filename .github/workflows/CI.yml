@@ -1,0 +1,6 @@
+name: DevSecops Accelerator - Java Boiler Plate
+on:
+  push:
+    branches: [ "master" ] #Sample branch 
+  pull_request:
+    branches: [ "master" ] #Sample branch
