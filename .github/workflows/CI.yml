@@ -167,8 +167,8 @@ jobs:
       name: GitHub Action for Helm Templates Validation
       uses: hopisaurus/helm-check-action@v0.1.1
       env:
-        chart_location: ./charts
-        chart_values: ./charts/values.yaml
+        CHART_LOCATION: ./charts
+        CHART_VALUES: ./charts/values.yaml
 
   Helm-Build:
     runs-on: ubuntu-latest
